@@ -10,3 +10,10 @@ test('visiting /', function(assert) {
     assert.equal(currentURL(), '/');
   });
 });
+
+test('should show the available products', function (assert) {
+  visit('/');
+  andThen(function () {
+    assert.equal(this.$('.product').length, 1, "should see the product for sale");
+  });
+});
