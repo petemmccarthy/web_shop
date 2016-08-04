@@ -3,10 +3,10 @@ import moduleForAcceptance from 'web-shop/tests/helpers/module-for-acceptance';
 
 moduleForAcceptance('Acceptance | product list');
 
-test('visiting /product-list', function(assert) {
-  visit('/product-list');
+test('visiting /', function(assert) {
+  visit('/');
 
   andThen(function() {
-    assert.equal(currentURL(), '/product-list');
+    assert.equal(currentURL(), '/');
   });
 });
