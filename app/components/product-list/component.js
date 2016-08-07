@@ -8,5 +8,14 @@ export default Ember.Component.extend({
   }, {
     name: 'dog',
     price: 10
+  }, {
+    name: 'parrot',
+    price: 12
+  }, {
+    name: 'hamster',
+    price: 15
+  }, , {
+    name: 'rabbit',
+    price: 8
   }]
 });
