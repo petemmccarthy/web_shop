@@ -5,7 +5,22 @@ module.exports = function(app) {
 
   animalsRouter.get('/', function(req, res) {
     res.send({
-      'animals': []
+      'animals': [{
+        name: "cat",
+        price: 5
+      }, {
+        name: "dog",
+        price: 10
+      }, {
+        name: "parrot",
+        price: 12
+      }, {
+        name: "hamster",
+        price: 15
+      }, {
+        name: "rabbit",
+        price: 8
+      }]
     });
   });
 
