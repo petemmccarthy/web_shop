@@ -20,6 +20,9 @@ module.exports = function(app) {
       }, {
         name: "rabbit",
         price: 8
+      }, {
+        name: "turtle",
+        price: 9
       }]
     });
   });

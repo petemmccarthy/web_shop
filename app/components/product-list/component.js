@@ -17,5 +17,8 @@ export default Ember.Component.extend({
   }, {
     name: 'rabbit',
     price: 8
+  }, {
+    name: 'turtle',
+    price: 9
   }]
 });
