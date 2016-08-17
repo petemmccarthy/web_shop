@@ -1,6 +1,6 @@
 <!-- {{outlet}} -->
-{{#each animals as | animal | }}
-  {{animal.id}}
-  {{animal.name}}
-  {{animal.price}}
-{{/each}}
+<div class="col-lg-8 col-lg-offset-2 animals">
+  {{#each animals as | animal | }}
+    <h3>{{animal.name}} £{{animal.price}}</h3>
+  {{/each}}
+</div>
