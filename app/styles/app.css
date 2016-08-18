@@ -25,6 +25,16 @@ body {
   margin-bottom: 50px;
 }
 
+.circle-image {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
 .footer {
   position:fixed;
   bottom: 0;
