@@ -7,22 +7,18 @@ body {
   text-align: center;
 }
 
-.title {
-  margin: 50px 0 50px 0;
+.mt50 {
+  margin-top: 50px;
+}
+
+.mb50 {
+  margin-bottom: 50px;
 }
 
 .divider {
   width: 90%;
   margin: 0 auto;
   border-bottom: 1px solid #232323;
-}
-
-.intro {
-  margin: 50px 0 50px 0;
-}
-
-.mb50 {
-  margin-bottom: 50px;
 }
 
 .circle-image {
