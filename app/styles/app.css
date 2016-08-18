@@ -35,6 +35,10 @@ body {
   overflow: hidden;
 }
 
+.animal-detail {
+  margin-top: 20px;
+}
+
 .footer {
   position:fixed;
   bottom: 0;
