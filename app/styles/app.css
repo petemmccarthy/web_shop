@@ -25,10 +25,8 @@ body {
   margin-top: 15px;
 }
 
-footer {
-	height: 50px;
+.footer {
   position:fixed;
-  bottom:0;
-  left: 0;
+  bottom: 0;
   width: 100%;
 }
