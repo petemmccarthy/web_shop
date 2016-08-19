@@ -57,3 +57,12 @@ ul {
   bottom: 0;
   width: 100%;
 }
+
+@media (max-width: 987px) {
+  .mobile-center {
+    text-align: center;
+  }
+  .mobile-mt150 {
+    margin-top: 150px;
+  }
+}
