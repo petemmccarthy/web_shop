@@ -1,16 +1,13 @@
 
-{{#link-to "home"}}
-  <h1 class="text-center mt50 mb50"><em>Welcome to the Pet Shop!</em></h1>
-{{/link-to}}
+<div class="menu">
 
-<div class="divider"></div>
+  <ul><h1>{{link-to "Welcome to the Pet Shop!" "home" }}</h1></ul>
 
-<div class="text-center mt50 mb50">
+  <ul><h3>{{link-to "Animals" "home.animals" }}</h3></ul>
+  <ul><h3>{{link-to "Contact" "home.contact" }}</h3></ul>
 
-  <button class="btn" {{action 'showAnimals'}} >Animals</button>
-
-  <button class="btn" {{action 'showContact'}} >Contact</button>
-
+  <div class="divider"></div>
+  
 </div>
 
 {{outlet}}
