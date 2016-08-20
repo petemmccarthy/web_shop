@@ -70,4 +70,7 @@ a:hover, a:focus {
   .mobile-mt150 {
     margin-top: 150px;
   }
+  .mobile-menu-height {
+    height: 45px;
+  }
 }
