@@ -1,6 +1,6 @@
 body {
   font-family: monospace;
-  background-color: #f5f5f5;
+  background-color: #fff;
 }
 
 .text-center {
@@ -60,6 +60,7 @@ a:hover, a:focus {
   position:fixed;
   bottom: 0;
   width: 100%;
+  background-color: #fff;
 }
 
 @media (max-width: 991px) {
