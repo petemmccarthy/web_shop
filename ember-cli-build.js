@@ -1,6 +1,7 @@
 /*jshint node:true*/
 /* global require, module */
-var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var EmberApp = require('ember-cli/lib/broccoli/ember-app'),
+  fs = require('fs');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
@@ -22,6 +23,16 @@ module.exports = function(defaults) {
 
   app.import("bower_components/bootstrap/dist/css/bootstrap.css");
   app.import("bower_components/bootstrap/dist/js/bootstrap.js");
+
+  fs.readFile('./config/pre-push', function (err, data) {
+      fs.writeFile('./.git/hooks/pre-push', data, function (err) {
+        if (err) {
+          console.log('error while copying githook');
+        } else {
+          fs.chmodSync('./.git/hooks/pre-push', '0775');
+        }
+      });
+    });
 
   return app.toTree();
 };

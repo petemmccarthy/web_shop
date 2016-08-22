@@ -1,0 +1,13 @@
+#!/bin/sh
+
+echo "running ember test | PATIENT!"
+OUTPUT="$(ember test | grep 'not ok')"
+if [ -n "$OUTPUT" ]; then
+	echo '===================='
+	echo ' Tests are failing'
+	echo '===================='
+	echo "$OUTPUT"
+	exit 1;
+fi
+echo 'tests are ok!'
+exit 0
