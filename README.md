@@ -1,7 +1,13 @@
 # Web-shop
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This app is a
+It
+
+## Still to be implemented
+
+* signup/login
+* basket
+* payments
 
 ## Prerequisites
 
@@ -29,10 +35,19 @@ You will need the following things properly installed on your computer.
 
 Make use of the many generators for code, try `ember help generate` for more details
 
+## Code Test Coverage
+
+Tests are auto-run when any commits are pushed to GitHub. Failing tests will result in GitHub rejected the Push.
+
+The code is covered by Acceptance, Integration and Unit tests.
+
 ### Running Tests
 
 * `ember test`
 * `ember test --server`
+
+Or alternatively by visiting:
+[http://localhost:4200/tests](http://localhost:4200/tests).
 
 ### Building
 
@@ -50,4 +65,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
