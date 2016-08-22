@@ -1,10 +1,19 @@
 
-<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 text-center mt100 mobile-mt150">
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center mt100 mobile-mt150">
   <h1>Welcome to the Pet Shop!</h1>
-  <p>
-    Looking for that special, funny little creature in your life?
-  </p>
 
+  <figure class="monkey-face">
+    <div>
+      <img src="/assets/images/monkey_face.png" alt="Monkey">
+    </div>
+  </figure>
+
+  <div class="intro">
+    <p>Looking for that special, funny little creature in your life?</p>
+    <p>{{link-to "Find them right here!" "home.animals"}}</p>
+  </div>
+
+  <!-- {{link-to "Find them right here!" "home.animals"}} -->
 </div>
 
 {{outlet}}
