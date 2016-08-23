@@ -7,6 +7,10 @@ body {
   text-align: center;
 }
 
+.mt20 {
+  margin-top: 20px;
+}
+
 .mt50 {
   margin-top: 50px;
 }
@@ -63,6 +67,12 @@ a:hover, a:focus {
 .animal-detail {
   font-size: 18px;
   margin-top: 20px;
+}
+
+.form {
+  text-align: center;
+  font-size: 20px;
+  font-weight: normal;
 }
 
 .footer {

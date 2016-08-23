@@ -1,11 +1,33 @@
 <!-- {{yield}} -->
-{{#x-select class="my-drop-down" value=model.title action="selectTitle"}}
-  {{#x-option value=""}}
-    Please select
-  {{/x-option}}
-  {{#each titles as |option|}}
-    {{#x-option value=option.value}}
-      {{option.label}}
-    {{/x-option}}
-  {{/each}}
-{{/x-select}}
+<div class="col-lg-12 col-xs-12 form mb50">
+
+  <label class="title" for="title">Title</label>
+  <div>
+    {{#x-select class="title-input" value=model.title action="selectTitle"}}
+      {{#x-option value=""}}
+        Please select
+      {{/x-option}}
+      {{#each titles as |option|}}
+        {{#x-option value=option.value}}
+          {{option.label}}
+        {{/x-option}}
+      {{/each}}
+    {{/x-select}}
+  </div>
+
+  <label class="firstname mt20" for="first-name">First name</label>
+  <div class="input-first-name">
+    {{input value=model.firstName class="" id="first-name"}}
+  </div>
+
+  <label class="lastname mt20" for="last-name">Surname</label>
+  <div class="input-last-name">
+    {{input value=model.lastName class="" id="last-name"}}
+  </div>
+
+  <label class="emailaddress mt20" for="email">Email</label>
+  <div class="input-email">
+    {{input value=model.email class="" id="email"}}
+  </div>
+
+</div>
