@@ -47,12 +47,6 @@ export default Ember.Component.extend({
       label: 'Professor',
       value: 'Professor'
     }
-  ],
-
-  actions: {
-    selectTitle(value, component) {
-      this.set('model.title', value);
-    }
-  }
+  ]
 
 });

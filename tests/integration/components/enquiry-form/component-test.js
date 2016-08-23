@@ -10,15 +10,18 @@ test('it renders', function(assert) {
   // Handle any actions with this.on('myAction', function(val) { ... });
 
   this.render(hbs`{{enquiry-form}}`);
+  assert.ok(this.$('.input-title').length, 'First name', 'should show Title selection');
+  assert.ok(this.$('.firstname').length, 'First name', 'should show First name input');
+  assert.ok(this.$('.lastname').length, 'Last name', 'should show First name input');
+  assert.ok(this.$('.emailaddress').length, 'Email', 'should show email input');
 
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#enquiry-form}}
-      template block text
-    {{/enquiry-form}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  //
+  // // Template block usage:
+  // this.render(hbs`
+  //   {{#enquiry-form}}
+  //     template block text
+  //   {{/enquiry-form}}
+  // `);
+  //
+  // assert.equal(this.$().text().trim(), 'template block text');
 });
