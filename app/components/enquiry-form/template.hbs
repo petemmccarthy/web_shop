@@ -1,1 +1,11 @@
-{{yield}}
+<!-- {{yield}} -->
+{{#x-select class="my-drop-down" value=model.title action="selectTitle"}}
+  {{#x-option value=""}}
+    Please select
+  {{/x-option}}
+  {{#each titles as |option|}}
+    {{#x-option value=option.value}}
+      {{option.label}}
+    {{/x-option}}
+  {{/each}}
+{{/x-select}}
