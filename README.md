@@ -8,6 +8,7 @@ It
 * signup/login
 * basket
 * payments
+* a little more thought and focus on ux and design
 
 ## Prerequisites
 
