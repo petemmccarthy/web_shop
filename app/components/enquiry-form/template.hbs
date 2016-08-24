@@ -1,13 +1,28 @@
 <!-- {{yield}} -->
 <div class="col-lg-12 col-xs-12 enquiry-form mb50">
 
+  <h3 class="text-center">Who do you like the look of?</h3>
+  <div>
+    {{#x-select class="animal-input" value=model.name action="selectAnimal"}}
+      {{#x-option value=""}}
+        Who?
+      {{/x-option}}
+      {{#each animals as | animal |}}
+        {{#x-option value=model.name}}
+          {{model.name}}
+        {{/x-option}}
+      {{/each}}
+    {{/x-select}}
+  </div>
+
+  <h3 class="text-center mt50">A few details about you please?</h3>
   <label class="input-title" for="title">Title</label>
   <div>
     {{#x-select class="title-input" value=model.title action="selectTitle"}}
       {{#x-option value=""}}
         Please select
       {{/x-option}}
-      {{#each titles as |option|}}
+      {{#each titles as | option |}}
         {{#x-option value=option.value}}
           {{option.label}}
         {{/x-option}}
