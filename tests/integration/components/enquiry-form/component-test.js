@@ -15,13 +15,4 @@ test('it renders', function(assert) {
   assert.ok(this.$('.lastname').length, 'Last name', 'should show First name input');
   assert.ok(this.$('.emailaddress').length, 'Email', 'should show email input');
 
-  //
-  // // Template block usage:
-  // this.render(hbs`
-  //   {{#enquiry-form}}
-  //     template block text
-  //   {{/enquiry-form}}
-  // `);
-  //
-  // assert.equal(this.$().text().trim(), 'template block text');
 });
