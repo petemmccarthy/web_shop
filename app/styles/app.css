@@ -69,10 +69,13 @@ a:hover, a:focus {
   margin-top: 20px;
 }
 
+label {
+  font-weight: normal;
+}
+
 .enquiry-form {
   text-align: center;
   font-size: 20px;
-  font-weight: normal;
 }
 
 .footer {
