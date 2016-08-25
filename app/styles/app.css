@@ -69,6 +69,10 @@ a:hover, a:focus {
   margin-top: 20px;
 }
 
+.border-round {
+  border-radius: 5px;
+}
+
 label {
   font-weight: normal;
 }
