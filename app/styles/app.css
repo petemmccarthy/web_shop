@@ -7,6 +7,10 @@ body {
   text-align: center;
 }
 
+.p5 {
+    padding: 0 5px 0 5px;
+}
+
 .mt20 {
   margin-top: 20px;
 }
