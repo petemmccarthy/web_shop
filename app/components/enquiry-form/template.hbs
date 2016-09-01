@@ -7,7 +7,7 @@
       {{#x-option value="animal-name"}}
         Who?
       {{/x-option}}
-      {{#each animals as | animal |}}
+      {{#each model as | animal |}}
         {{#x-option value=animal.name}}
           {{animal.name}}
         {{/x-option}}
