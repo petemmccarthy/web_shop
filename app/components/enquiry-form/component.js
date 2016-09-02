@@ -52,6 +52,14 @@ export default Ember.Component.extend({
 
   animals: Ember.computed('animals', function() {
     return this.get('store').findAll('animal');
-  })
+  }),
+
+  renderSummary: false,
+
+  actions: {
+    saveDetails() {
+      this.set('renderSummary', true);
+    }
+  }
 
 });

@@ -3,7 +3,7 @@
 
   <h3 class="text-center">Who do you like the look of?</h3>
   <div>
-    {{#x-select class="animal-input" value=animal.name action="selectAnimal"}}
+    {{#x-select class="animal-input" value=animal action="selectAnimal"}}
       {{#x-option value="animal-name"}}
         Please select Animal
       {{/x-option}}
@@ -18,7 +18,7 @@
   <h3 class="text-center mt50">A few details about you please</h3>
   <label class="input-title mt20" for="title">Title</label>
   <div>
-    {{#x-select class="title-input" action="selectTitle"}}
+    {{#x-select value=title class="title-input" action="selectTitle"}}
       {{#x-option value="title"}}
         Please select Title
       {{/x-option}}
@@ -32,19 +32,27 @@
 
   <label class="firstname mt20" for="first-name">First name</label>
   <div class="input-first-name">
-    {{input value=model.firstName class="border-round" id="first-name"}}
+    {{input value=firstName class="border-round" id="first-name" action="saveFirstName"}}
   </div>
 
   <label class="lastname mt20" for="last-name">Surname</label>
   <div class="input-last-name">
-    {{input value=model.lastName class="border-round" id="last-name"}}
+    {{input value=lastName class="border-round" id="last-name"}}
   </div>
 
   <label class="emailaddress mt20" for="email">Email</label>
   <div class="input-email">
-    {{input value=model.email class="border-round" id="email"}}
+    {{input value=email class="border-round" id="email"}}
   </div>
 
-  <button class="mt20 mb50">Enquire</button>
+  <button class="mt20 mb50" {{action 'saveUser'}}>Enquire</button>
+
+  {{#if renderSummary}}
+    <h1>Animal:{{animal}}</h1>
+    <h1>Title:{{title}}</h1>
+    <h1>First Name:{{firstName}}</h1>
+    <h1>Last Name:{{lastName}}</h1>
+    <h1>Email:{{email}}</h1>
+  {{/if}}
 
 </div>
