@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  store: Ember.inject.service(),
   classNames: ['enquiry-form'],
   titles: [
     {
@@ -47,6 +48,10 @@ export default Ember.Component.extend({
       label: 'Professor',
       value: 'Professor'
     }
-  ]
+  ],
+
+  animals: Ember.computed('animals', function() {
+    return this.get('store').findAll('animal');
+  })
 
 });

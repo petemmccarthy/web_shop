@@ -5,9 +5,9 @@
   <div>
     {{#x-select class="animal-input" value=animal.name action="selectAnimal"}}
       {{#x-option value="animal-name"}}
-        Who?
+        Please select Animal
       {{/x-option}}
-      {{#each model as | animal |}}
+      {{#each animals as | animal |}}
         {{#x-option value=animal.name}}
           {{animal.name}}
         {{/x-option}}
@@ -15,12 +15,12 @@
     {{/x-select}}
   </div>
 
-  <h3 class="text-center mt50">A few details about you please?</h3>
-  <label class="input-title" for="title">Title</label>
+  <h3 class="text-center mt50">A few details about you please</h3>
+  <label class="input-title mt20" for="title">Title</label>
   <div>
     {{#x-select class="title-input" action="selectTitle"}}
       {{#x-option value="title"}}
-        Please select
+        Please select Title
       {{/x-option}}
       {{#each titles as | option |}}
         {{#x-option value=option.value}}
@@ -44,5 +44,7 @@
   <div class="input-email">
     {{input value=model.email class="border-round" id="email"}}
   </div>
+
+  <button class="mt20 mb50">Enquire</button>
 
 </div>
