@@ -45,11 +45,15 @@
     {{input value=email class="border-round" id="email"}}
   </div>
 
-  <button class="mt20 mb50" {{action 'saveDetails'}}>Enquire</button>
+  <div class="col-sm-12 mt20">
+    <button class="mt20 mb50" {{action 'saveDetails'}}>Enquire</button>
+  </div>
 
   {{#if renderSummary}}
+  <div class="col-md-8 col-md-offset-2 col-sm-12 mb50">
     <p>Hello, {{title}} {{firstName}} {{lastName}}!</p>
     <p>Thank you for enquiring about the {{animal}}. We'll email you at {{email}} when one becomes available.</p>
+  </div>
   {{/if}}
 
 </div>
