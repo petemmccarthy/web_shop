@@ -3,7 +3,7 @@
 
   <h3 class="text-center">Who do you like the look of?</h3>
   <div>
-    {{#x-select class="animal-input" value=animal action="selectAnimal"}}
+    {{#x-select class="animal-input" value=animal}}
       {{#x-option value="animal-name"}}
         Please select Animal
       {{/x-option}}
@@ -18,7 +18,7 @@
   <h3 class="text-center mt50">A few details about you please</h3>
   <label class="input-title mt20" for="title">Title</label>
   <div>
-    {{#x-select value=title class="title-input" action="selectTitle"}}
+    {{#x-select value=title class="title-input"}}
       {{#x-option value="title"}}
         Please select Title
       {{/x-option}}
