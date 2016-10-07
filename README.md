@@ -1,9 +1,20 @@
 # Web-shop
 
-This app is a basic Pet Shop displaying various extoic animals.
-It
+Basic Pet Shop displaying various exotic animals built using the EmberJS framework.
+Animal data is retrieved in json format using a [mock server](https://github.com/typicode/json-server) running locally as site is not live.
 
-## Still to be implemented
+Tests are written using qunit which auto run when code is pushed to Github, the push fails if any tests are failing.
+
+## To be finished/bugs to fix...
+
+* Fix scrolling to new part of page on transition to new url (route)
+* Element displays but not google map on initial render of contact page, only on re-render
+* Mirage/mock server for running tests as currently they fail if json-server not running
+* Enquiry form data to clear when submitted
+* Further tests
+* Needs a litle bit more styling!
+
+And then...
 
 * signup/login
 * basket
