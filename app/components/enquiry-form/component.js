@@ -56,11 +56,6 @@ export default Ember.Component.extend({
 
   renderSummary: false,
 
-  didRender() {
-    this._super(...arguments);
-    this.$('#details').scrollTop(this.$('.input-details').position.top);
-  },
-
   actions: {
     saveDetails() {
       this.set('renderSummary', true);
