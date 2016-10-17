@@ -7,10 +7,11 @@ Tests are written using qunit which auto run when code is pushed to Github, the 
 
 ## To be finished/bugs to fix...
 
-* Fix scrolling to new part of page on transition to new url (route)
-* Element displays but not google map on initial render of contact page, only on re-render
+* Add scrolling to animals section on transition to new url (route)
+* Element displays but not map on initial render of contact page, only on re-render
 * Mirage/mock server for running tests as currently they fail if json-server not running
 * Enquiry form data to clear when submitted
+* Enquiry button disabled until all sections complete/valid
 * Further tests
 * Needs a litle bit more styling!
 
