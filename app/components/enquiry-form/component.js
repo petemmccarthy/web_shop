@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   store: Ember.inject.service(),
+  scroller: Ember.inject.service(),
   classNames: ['enquiry-form'],
   titles: [
     {
@@ -55,6 +56,10 @@ export default Ember.Component.extend({
   }),
 
   renderSummary: false,
+
+  didRender() {
+    this.get('scroller').scrollVertical('#details');
+  },
 
   actions: {
     saveDetails() {
