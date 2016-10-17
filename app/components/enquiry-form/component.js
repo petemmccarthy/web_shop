@@ -57,7 +57,7 @@ export default Ember.Component.extend({
 
   renderSummary: false,
 
-  didRender() {
+  didInsertElement() {
     this.get('scroller').scrollVertical('#details', {offset: -100});
   },
 
