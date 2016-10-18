@@ -1,0 +1,29 @@
+<div class="col-sm-12 animals">
+  <h2 id="animals" class="text-center mt50">Choose from one of these beauties!</h2>
+  <section class="row">
+
+    <!-- temporarily commented out -->
+    <!-- <div class="animal-type text-center">
+      <h5>(Narrow your search if you like)</h5>
+      <label><input type="checkbox" value="animal-type-sort" class="p5">Bird</label>
+      <label><input type="checkbox" value="animal-type-sort" class="p5">Mammal</label>
+      <label><input type="checkbox" value="animal-type-sort" class="p5" disabled>Fish</label>
+    </div> -->
+
+    {{#each animals as | model | }}
+      <div class="col-md-4 mt50 mb50">
+        <figure>
+          <div class="circle-image">
+            <img src="/assets/images/{{model.name}}.png" alt="{{model.name}}">
+          </div>
+          <figcaption class="text-center animal-detail">
+            <p>{{model.name}} £{{model.price}}</p>
+            <p><i>"{{model.comment}}"</i></p>
+          </figcaption>
+        </figure>
+        <p class="text-center">{{link-to "Like the look of me?" "home.animals.enquire"}}</p>
+      </div>
+    {{/each}}
+
+  </section>
+</div>
