@@ -11,5 +11,6 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{animals-display}}`);
 
+  assert.ok(this.$('.animals').length, 'should render the animals display');
   assert.equal(this.$().text().trim(), 'Choose from one of these beauties!');
 });
