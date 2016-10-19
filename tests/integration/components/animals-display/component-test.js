@@ -32,3 +32,19 @@ test('it displays all the animals', function (assert) {
   assert.equal(this.$('div.animal').length, mockAnimals.length, 'should show all available animals');
 
 });
+
+test('animal details are displayed', function (assert) {
+  let mockAnimal = [{
+    name: 'dog',
+    price: '100',
+    comment: 'woof'
+  }],
+
+  mockNameAndPrice = mockAnimal[0].name + ' £' + mockAnimal[0].price;
+
+  this.set('animals', mockAnimal);
+  this.render(hbs`{{animals-display animals=animals}}`);
+
+  assert.equal(this.$('p').first().text().trim(), mockNameAndPrice, 'should show the animals name');
+
+});
