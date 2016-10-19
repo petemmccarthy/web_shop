@@ -38,3 +38,15 @@ test('visiting contact link', function(assert) {
     assert.equal(currentURL(), '/contact');
   });
 });
+
+test('home link', function(assert) {
+  visit('/');
+
+  andThen(function() {
+    click('#homeLink a');
+  });
+
+  andThen(function() {
+    assert.equal(currentURL(), '/');
+  });
+});
