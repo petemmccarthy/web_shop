@@ -6,7 +6,7 @@ moduleForAcceptance('Acceptance | home');
 test('home page', function(assert) {
   visit('/');
 
-  andThen(function() {
+  andThen( function() {
     assert.equal(currentURL(), '/');
     assert.equal(find('.title').length, 1);
     assert.equal(find('#animalsLink').length, 1);
@@ -15,7 +15,7 @@ test('home page', function(assert) {
   });
 });
 
-test('visiting contact link', function(assert) {
+test('visiting animals link', function(assert) {
   visit('/');
 
   andThen(function() {
