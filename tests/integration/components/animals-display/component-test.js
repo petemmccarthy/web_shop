@@ -40,13 +40,14 @@ test('animal details are displayed', function (assert) {
     comment: 'woof'
   }],
 
+  mockAnimalImageSRC = '/assets/images/' + mockAnimal[0].name + '.png',
   mockNameAndPrice = mockAnimal[0].name + ' £' + mockAnimal[0].price,
   mockAnimalComment = '\"' + mockAnimal[0].comment + '\"';
 
   this.set('animals', mockAnimal);
   this.render(hbs`{{animals-display animals=animals}}`);
 
+  assert.equal(this.$('img').attr('src'), mockAnimalImageSRC, 'should dispaly a picture of the correct animal');
   assert.equal(this.$('p').first().text().trim(), mockNameAndPrice, 'should dispaly animals name and price');
   assert.equal(this.$('i').first().text().trim(), mockAnimalComment, 'should display animals comment');
-
 });
