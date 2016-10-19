@@ -11,6 +11,24 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{animals-display}}`);
 
-  assert.ok(this.$('.animals').length, 'should render the animals display');
+  assert.ok(this.$('.animals').length, 'should render the display animals component');
   assert.equal(this.$().text().trim(), 'Choose from one of these beauties!');
+});
+
+test('it displays all the animals', function (assert) {
+  let mockAnimals = [{
+    name: 'dog',
+    price: '100',
+    comment: 'woof'
+  }, {
+    name: 'cat',
+    price: '10',
+    comment: 'meow'
+  }];
+
+  this.set('animals', mockAnimals);
+  this.render(hbs`{{animals-display animals=animals}}`);
+
+  assert.equal(this.$('div.animal').length, mockAnimals.length, 'should show all available animals');
+
 });
