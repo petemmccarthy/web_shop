@@ -10,9 +10,9 @@ test('it renders', function(assert) {
   // Handle any actions with this.on('myAction', function(val) { ... });
 
   this.render(hbs`{{enquiry-form}}`);
-  assert.ok(this.$('.input-title').length, 'First name', 'should show Title selection');
-  assert.ok(this.$('.firstname').length, 'First name', 'should show First name input');
-  assert.ok(this.$('.lastname').length, 'Last name', 'should show First name input');
+  assert.ok(this.$('.input-title').length, 'First name', 'should show title selection');
+  assert.ok(this.$('.firstname').length, 'First name', 'should show first name input');
+  assert.ok(this.$('.lastname').length, 'Last name', 'should show last name input');
   assert.ok(this.$('.emailaddress').length, 'Email', 'should show email input');
-
+  assert.ok(this.$('button').length, 'Enquire', 'should show Enquire button');
 });
