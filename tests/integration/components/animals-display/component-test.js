@@ -30,7 +30,6 @@ test('it displays all the animals', function (assert) {
   this.render(hbs`{{animals-display animals=animals}}`);
 
   assert.equal(this.$('div.animal').length, mockAnimals.length, 'should show all available animals');
-
 });
 
 test('animal details are displayed', function (assert) {
