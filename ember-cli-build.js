@@ -23,6 +23,7 @@ module.exports = function(defaults) {
 
   app.import("bower_components/bootstrap/dist/css/bootstrap.css");
   app.import("bower_components/bootstrap/dist/js/bootstrap.js");
+  app.import("vendor/gmaps.js");
 
   fs.readFile('./config/pre-push', function (err, data) {
       fs.writeFile('./.git/hooks/pre-push', data, function (err) {
