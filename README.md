@@ -7,10 +7,10 @@ Tests are written using qunit which auto run when code is pushed to Github, the 
 
 ## To be finished/bugs to fix...
 
-* Element displays but not map on initial render of contact page, only on re-render
-* Mirage/mock server for running tests as currently they fail if json-server not running
+* Form validations
 * Enquiry form data to clear when submitted
 * Enquiry button disabled until all sections complete/valid
+* Mirage/mock server for running tests as currently they fail if json-server not running
 * Further tests
 * Needs a litle bit more styling!
 
