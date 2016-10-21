@@ -12,7 +12,7 @@ test('it renders', function(assert) {
   this.render(hbs`{{animals-display}}`);
 
   assert.ok(this.$('.animals').length, 'should render the display animals component');
-  assert.equal(this.$().text().trim(), 'Choose from one of these beauties!');
+  assert.equal(this.$().text().trim(), 'Choose from one of these little beauties!');
 });
 
 test('it displays all the animals', function (assert) {
