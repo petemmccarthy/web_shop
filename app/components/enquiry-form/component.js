@@ -1,6 +1,15 @@
 import Ember from 'ember';
+// import EmberValidations from 'ember-validations';
 
 export default Ember.Component.extend({
+
+  // validations: {
+  //   'firstName': {
+  //     presence: true,
+  //     length: { minimum: 5 }
+  //   }
+  // },
+
   store: Ember.inject.service(),
   scroller: Ember.inject.service(),
   classNames: ['enquiry-form'],
