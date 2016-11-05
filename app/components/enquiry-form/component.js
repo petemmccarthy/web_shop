@@ -65,6 +65,7 @@ export default Ember.Component.extend({
   }),
 
   renderSummary: false,
+  renderDetails: true,
 
   didInsertElement() {
     this.get('scroller').scrollVertical('#details', {offset: -90});
@@ -73,6 +74,11 @@ export default Ember.Component.extend({
   actions: {
     saveDetails() {
       this.set('renderSummary', true);
+      this.set('renderDetails', false);
+    },
+    showDetailsForm() {
+      this.set('renderSummary', false);
+      this.set('renderDetails', true);
     }
   }
 
