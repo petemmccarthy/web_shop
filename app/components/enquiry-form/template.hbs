@@ -1,59 +1,64 @@
 
 <div id="details" class="col-lg-12 col-xs-12 mb50">
 
-  <h3 class="text-center input-details">Who do you like the look of?</h3>
-  <div>
-    {{#x-select class="animal-input" value=animal}}
-      {{#x-option value="animal-name"}}
-        Please select Animal
-      {{/x-option}}
-      {{#each animals as | animal |}}
-        {{#x-option value=animal.name}}
-          {{animal.name}}
+  {{#if renderDetails}}
+    <h3 class="text-center input-details">Who do you like the look of?</h3>
+    <div>
+      {{#x-select class="animal-input" value=animal}}
+        {{#x-option value="animal-name"}}
+          Please select Animal
         {{/x-option}}
-      {{/each}}
-    {{/x-select}}
-  </div>
+        {{#each animals as | animal |}}
+          {{#x-option value=animal.name}}
+            {{animal.name}}
+          {{/x-option}}
+        {{/each}}
+      {{/x-select}}
+    </div>
 
-  <h3 class="text-center mt50">A few details about you please</h3>
-  <label class="input-title mt20" for="title">Title</label>
-  <div>
-    {{#x-select value=title class="title-input"}}
-      {{#x-option value="title"}}
-        Please select Title
-      {{/x-option}}
-      {{#each titles as | option |}}
-        {{#x-option value=option.value}}
-          {{option.label}}
+    <h3 class="text-center mt50">A few details about you please</h3>
+    <label class="input-title mt20" for="title">Title</label>
+    <div>
+      {{#x-select value=title class="title-input"}}
+        {{#x-option value="title"}}
+          Please select Title
         {{/x-option}}
-      {{/each}}
-    {{/x-select}}
-  </div>
+        {{#each titles as | option |}}
+          {{#x-option value=option.value}}
+            {{option.label}}
+          {{/x-option}}
+        {{/each}}
+      {{/x-select}}
+    </div>
 
-  <label class="firstname mt20" for="first-name">First name</label>
-  <div class="input-first-name">
-    {{input value=firstName class="border-round" id="first-name"}}
-  </div>
+    <label class="firstname mt20" for="first-name">First name</label>
+    <div class="input-first-name">
+      {{input value=firstName class="border-round" id="first-name"}}
+    </div>
 
-  <label class="lastname mt20" for="last-name">Surname</label>
-  <div class="input-last-name">
-    {{input value=lastName class="border-round" id="last-name"}}
-  </div>
+    <label class="lastname mt20" for="last-name">Surname</label>
+    <div class="input-last-name">
+      {{input value=lastName class="border-round" id="last-name"}}
+    </div>
 
-  <label class="emailaddress mt20" for="email">Email</label>
-  <div class="input-email">
-    {{input value=email class="border-round" id="email"}}
-  </div>
+    <label class="emailaddress mt20" for="email">Email</label>
+    <div class="input-email">
+      {{input value=email class="border-round" id="email"}}
+    </div>
 
-  <div class="col-sm-12 mt20">
-    <button class="border-round mt20 mb50" {{action 'saveDetails'}}>Enquire</button>
-  </div>
+    <div class="col-sm-12 mt20">
+      <button class="border-round mt20 mb50" {{action 'saveDetails'}}>Enquire</button>
+    </div>
+  {{/if}}
 
   {{#if renderSummary}}
-  <div class="col-md-8 col-md-offset-2 col-sm-12 mb50">
-    <p>Hello, {{title}} {{firstName}} {{lastName}}!</p>
-    <p>Thank you for enquiring about the {{animal}}. We'll email you at {{email}} when your {{animal}} is ready for a new home.</p>
-  </div>
+    <div id="summary" class="col-md-8 col-md-offset-2 col-sm-12 mb50">
+      <p>Hello, {{title}} {{firstName}} {{lastName}}!</p>
+      <p>Thank you for enquiring about the {{animal}}. We'll email you at {{email}} when your {{animal}} is ready for a new home.</p>
+    </div>
+    <div class="col-sm-12 mt20">
+      <button class="border-round mt20 mb50" {{action 'showDetailsForm'}}>Back</button>
+    </div>
   {{/if}}
 
 </div>
