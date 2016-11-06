@@ -85,6 +85,9 @@ label {
   text-align: center;
   font-size: 20px;
 }
+.animal-input, .title-input {
+  font-size: 16px;
+}
 
 .contact-address {
   font-size: 26px;
