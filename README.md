@@ -41,8 +41,14 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
+You need to run the server in another terminal window:
+* `npm install -g json-server`
+* `json-server --watch animals.json`
+
+Then...
+
 * `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+* Visit your app at [http://localhost:4200](http://localhost:4200)
 
 ### Code Generators
 
